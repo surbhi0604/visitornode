@@ -1,0 +1,58 @@
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <h1>
+        <title>Register User</title>
+    </h1>
+
+</head>
+
+
+<body id="RegisterForm">
+    <div class="container">
+        <div class="clearfix">
+            <nav>
+        <h1 class="form-heading"></h1>
+        <div ng-app="first-app" ng-controller="myCtrl" class="login-form">
+
+            <div class="main-div">
+
+                <div class="panel">
+                   
+                    <h2 align="center" class="modal-title" id="exampleModalLongTitle">Register</h2>
+                    <p>Please enter the following details</p>
+            
+                </div>
+
+
+                <form id="Login">
+     
+                <input type="text"  name="username" class="form-control" id="username" placeholder="Username" [(ngModel)]="model.userName" ><br>
+
+                       <input type="text" name="employeeid" class="form-control" id="employeeid" placeholder="Employee ID" [(ngModel)]="model.employeeId"><br>
+
+                      <input type="text" name="userid" id="userid" class="form-control" placeholder="User ID" [(ngModel)]="model.userId" maxlength="7"><br>
+
+                         <input type="password" name="password" class="form-control" id="password" placeholder="Password" [(ngModel)]="model.password"><br>
+
+                    <!--</div>-->
+                    <button type="submit" class="btn btn-primary" (click)="registerUser()">Submit</button>
+
+                </form>
+
+            </div>
+
+        </div>
+ 
+            </nav>
+          
+        </div>
+    </div>
+   
+ 
+</body>
+</html>
+
