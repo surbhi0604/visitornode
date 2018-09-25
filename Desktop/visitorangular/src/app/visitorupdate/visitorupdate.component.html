@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Visitor update</title>
+</head>
+<body id="add">
+
+
+  <h3 align="center" class="modal-title" id="exampleModalLongTitle">Update Visitor Details</h3>
+  <div class="main-div">
+
+    <!--<h4>
+      <span>Sr No</span>
+    </h4>
+    <input type="text" name="SrNo" id="srno" class="form-control" pInputText placeholder="Sr No." required minlength="1"
+      pattern="[0-9]{0,20}" [(ngModel)]="SrNo" #srno="ngModel" readonly>
+    <div *ngIf="srno.invalid && (srno.dirty || srno.touched)" class="alert alert-danger">
+
+      <div *ngIf="srno.errors.required">
+        SrNo is required.
+      </div>
+      <div *ngIf="srno.errors.minlength">
+        SrNo must be atleast 1 digit long.
+      </div>
+      <div *ngIf="srno.errors.pattern">
+        SrNo Id must contain only digits.
+      </div>
+    </div>-->
+
+    <h4>
+      <span>Date</span>
+    </h4>
+    <input type="text" name="dateval" id="date" class="form-control"  pInputText placeholder="Date" required
+     [(ngModel)]="dateval" #date="ngModel">
+    <div *ngIf="date.invalid && (date.dirty || date.touched)" class="alert alert-danger">
+
+      <div *ngIf="date.errors.required">
+        Date is required.
+      </div>
+      
+    </div>
+
+
+    <h4>
+          <span>Name</span>
+        </h4>
+        <input type="text"  name= "username" id="name" class="form-control" required minlength="2" pattern="[A-Z][a-z]{0,50}" pInputText placeholder="Visitor Name"
+          [(ngModel)]="username" #name="ngModel">
+        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+
+          <div *ngIf="name.errors.required">
+            Name is required.
+          </div>
+          <div *ngIf="name.errors.minlength">
+            Name must be at least 2 characters long.
+          </div>
+          <div *ngIf="name.errors.pattern">
+            Name must contain only characters and start with uppercase followed by lowercase.
+          </div>
+        </div>
+
+    <h4>
+      <span>Contact Name</span>
+    </h4>
+    <input type="text" name="contactName" id="cname"  class="form-control" required minlength="2" pattern="[A-Z][a-z]{0,50}" pInputText placeholder="Contact Person Name"
+      [(ngModel)]="contactName" #cname="ngModel">
+    <div *ngIf="cname.invalid && (cname.dirty || cname.touched)" class="alert alert-danger">
+
+      <div *ngIf="cname.errors.required">
+        Name is required.
+      </div>
+      <div *ngIf="cname.errors.minlength">
+        Name must be at least 2 characters long.
+      </div>
+      <div *ngIf="cname.errors.pattern">
+        Name must contain only characters and start with uppercase followed by lowercase.
+      </div>
+    </div>
+    
+    <h4>
+      <span>Contact employee ID</span>
+    </h4>
+    <input type="text" name="contactEmployeeId" id="eid"  class="form-control" required minlength="6" pattern="[0-9]{0,10}" pInputText placeholder="Contact Employee ID"
+      [(ngModel)]="contactEmployeeId" #eid="ngModel">
+    <div *ngIf="eid.invalid && (eid.dirty || eid.touched)" class="alert alert-danger">
+
+      <div *ngIf="eid.errors.required">
+        Employee Id is required.
+      </div>
+      <div *ngIf="eid.errors.minlength">
+        Employee Id must be at least 6 digits long.
+      </div>
+      <div *ngIf="eid.errors.pattern">
+        Employee Id must contain only digits.
+      </div>
+    </div>
+
+    <h4>
+      <span>Badge No.</span>
+    </h4>
+    <input type="text" name="badgeNo" id="bno" class="form-control" pInputText placeholder="Badge No." required minlength="1"
+      pattern="[0-9]{0,20}" [(ngModel)]="badgeNo" #bno="ngModel">
+    <div *ngIf="bno.invalid && (bno.dirty || bno.touched)" class="alert alert-danger">
+
+      <div *ngIf="bno.errors.required">
+        Badge No. is required.
+      </div>
+      <div *ngIf="bno.errors.minlength">
+        Badge No. must be atleast 1 digit long.
+      </div>
+      <div *ngIf="bno.errors.pattern">
+        Badge No. must contain only digits.
+      </div>
+    </div>
+
+
+    <h4>
+      <span>Purpose</span>
+    </h4>
+    <input type="text" id="loc" name="purpose" class="form-control" required pattern="[A-Za-z]{0,50}" pInputText placeholder="Purpose" [(ngModel)]="purpose"
+      #loc="ngModel">
+    <div *ngIf="loc.invalid && (loc.dirty || loc.touched)" class="alert alert-danger">
+
+      <div *ngIf="loc.errors.required">
+        Purpose is required.
+      </div>
+      <div *ngIf="loc.errors.pattern">
+        Purpose must contain only characters.
+      </div>
+    </div>
+
+    <h4>
+      <span>In Time</span>
+    </h4>
+
+    <input type="time" id="in" name="inTime" class="form-control" required pInputText placeholder="In Time"
+      [(ngModel)]="inTime" #in="ngModel">
+    <div *ngIf="in.invalid && (in.dirty || in.touched)" class="alert alert-danger">
+
+      <div *ngIf="in.errors.required">
+        In Time is required.
+      </div>
+    
+    </div>
+
+    <h4>
+      <span>Personal Items In</span>
+    </h4>
+    <input type="text" id="pin" name="personalItemIn" class="form-control" pattern="[A-Za-z]{0,50}" pInputText placeholder="Personal Items In" [(ngModel)]="personalItemIn"
+      #pin="ngModel">
+    <div *ngIf="pin.invalid && (pin.dirty || pin.touched)" class="alert alert-danger">
+
+      <div *ngIf="pin.errors.required">
+        Personal Items In is required.
+      </div>
+      <div *ngIf="pin.errors.pattern">
+        Location must contain only characters.
+      </div>
+    </div>
+
+    <h4>
+      <span>Out Time</span>
+    </h4>
+    <input type="time" id="out" name="outTime" class="form-control" required pInputText placeholder="Out Time" [(ngModel)]="outTime"
+      #out="ngModel">
+    <div *ngIf="out.invalid && (out.dirty || out.touched)" class="alert alert-danger">
+
+      <div *ngIf="out.errors.required">
+        Out Time is required.
+      </div>
+      
+    </div>
+
+     <h4>
+      <span>Personal Items Out</span>
+    </h4>
+    <input type="text" id="pout" name="personalItemOut" class="form-control" required pattern="[A-Za-z]{0,50}" pInputText placeholder="Pesonal Items Out" [(ngModel)]="personalItemOut"
+      #pout="ngModel">
+    <div *ngIf="pout.invalid && (pout.dirty || pout.touched)" class="alert alert-danger">
+
+      
+      <div *ngIf="pout.errors.pattern">
+        Personal Items out must contain only characters.
+      </div>
+    </div>
+
+     <h4>
+      <span>Remarks</span>
+    </h4>
+    <input type="text" id="rem" name="remarks" class="form-control" pattern="[A-Za-z]{0,50}" pInputText placeholder="Remarks" [(ngModel)]="remarks"
+      #rem="ngModel">
+    <div *ngIf="rem.invalid && (rem.dirty ||rem.touched)" class="alert alert-danger">
+
+        <div *ngIf="rem.errors.pattern">
+        Remarks must contain only characters.
+      </div>
+    </div>
+
+  </div>
+
+  <div style="text-align: center">
+    <button type="button" class="btn btn-secondary" routerLink="/visitorlist" data-dismiss="modal">Close</button>
+    <button type="button" (click)="updateVisitor(visitor)" data-dismiss="modal" class="btn btn-primary">Save changes</button>
+  </div>
+
+
+</body>
+</html>

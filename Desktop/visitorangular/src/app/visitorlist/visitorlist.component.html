@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <h1>
+    <title>Welcome to first-app!</title>
+  </h1>
+  <style>
+    table,
+    td,
+    th {
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 70%;
+    }
+
+    th,
+    td {
+      padding: 15px;
+    }
+  </style>
+</head>
+
+<body id="img3">
+
+  <h3 align="center">
+    Visitor Details</h3>
+  <div class="listContainer">
+
+    <div class="nav-item">
+
+      <a type="button" class="btn btn-primary" id="click" routerLink="/visitoradd">Visitor Add</a>
+       &nbsp;
+    
+      <button class="btn btn-primary" (click)="exportAsXLSX()">Export to Excel</button>
+    </div>
+
+   
+   
+    <div class="buttons">
+      <a type="button" class="btn btn-primary" routerLink="/postlogin" data-dismiss="modal">Back</a>
+    </div>
+
+    <div class="one">
+      <a type="button" class="btn btn-primary" (click)="logout()" routerLink="/" data-dismiss="modal">Log Out</a>
+    </div>
+    <ul> &nbsp;</ul>
+    <table align="center">
+      <tr>
+
+        <th *ngFor="let col of columns">{{col.header}}</th>
+
+      </tr>
+
+      <tr *ngFor="let visitor of visitorList; let i = index">
+        <td> {{i+1}}
+        </td>
+        <td> {{visitor.date}}
+        </td>
+        <td> {{visitor.name}}
+        </td>
+        <td> {{visitor.contactname}}
+        </td>
+        <td> {{visitor.contactemployeeid}}
+        </td>
+         <td> {{visitor.badgeno}}
+        </td>
+        <td> {{visitor.purpose}}
+        </td>
+        <td> {{visitor.intime}}
+        </td>
+        <td> {{visitor.personalitemin}}
+        </td>
+        <td> {{visitor.outtime}}
+        </td>
+         <td> {{visitor.personalitemout}}
+        </td>
+        <td> {{visitor.remarks}}
+        </td>
+       
+      
+
+        <td><button class="btn btn-primary"  (click)="updateVisitor(visitor)">edit</button></td>
+        <td><button class="btn btn-primary" (click)="deleteVisitor(visitor.srno)"><i class="fa fa-trash"></i>delete</button></td>
+      </tr>
+
+    </table>
+
+  </div>
+  <p align="center" class="msg_success">{{ msg }}</p>
+</body>
+
+</html>
+
